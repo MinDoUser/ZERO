@@ -1,4 +1,4 @@
-package zero
+package zero;
 import arc.*;
 import arc.util.*;
 import mindustry.*;
@@ -39,4 +39,5 @@ public class ZeroMod extends Mod{
 public void loadContent(){
         Log.info("Loaded all Java files.");
     }
+}
   
