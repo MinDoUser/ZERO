@@ -12,7 +12,10 @@ import mindustry.ui.Styles;
 //Yep, it's not the best name, but everthing else just didn't work...
 public class ZeroMod extends Mod{
   public ZeroMod(){
-    startScreen();
+	  //Object of mod is craeted when loaded into the Mods dialog...
+	  Events.on(ClientLoadEvent.class, e -> {
+    		startScreen();
+	  });
   }
 	public static void startScreen(){
 		BaseDialog dialog = new BaseDialog("Welcome");
