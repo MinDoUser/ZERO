@@ -12,6 +12,8 @@ import mindustry.world.meta.*;
 import mindustry.ui.dialogs.*;
 import mindustry.ui.Styles;
 
+import static mindustry.Vars.*;
+
 public class ContentInfoOverride extends ContentInfoDialog{
   public ContentInfoOverride(){
     super(); //Call superclass constructor.
