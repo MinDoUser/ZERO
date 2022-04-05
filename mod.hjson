@@ -1,23 +1,23 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Z E R O"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "zero"
 
 #your name
-author: "You"
+author: "lol02 | MinDoUser"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "zero.ZeroMod"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "A Mindustry mod. Nothing special. Have fun while try it!\n\n Hope to see your smile soon :D"
 
 #the mod version
-version: 1.0
+version: 1.0.1
 
 #the minimum game build required to run this mod
-minGameVersion: 129
+minGameVersion: 135
 
 #this is a java mod
 java: true
