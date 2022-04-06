@@ -13,7 +13,6 @@ import mindustry.ui.Styles;
 import zero.ui.dialogs.*;
 
 public class ZeroMod extends Mod{
-	public boolean override = true;
   public ZeroMod(){
 	  //Object of mod is created when loaded into the Mods dialog...
 
@@ -21,10 +20,9 @@ public class ZeroMod extends Mod{
 		  SettingsMenuDialog settings = Vars.ui.settings;
 		  settings.graphics.row();
 		  settings.graphics.checkPref("overridecontentdialog", true, b -> {
-			  override = b;
 			  Log.info("Boolean: "+b);
-		  });
-		  Vars.ui.content = override?new ContentInfoOverride(): new ContentInfoDialog();
+		  Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
+		  })
     		startScreen();
 	  });
   }
