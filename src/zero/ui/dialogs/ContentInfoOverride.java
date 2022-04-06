@@ -31,14 +31,14 @@ public class ContentInfoOverride extends ContentInfoDialog{
         table.table(title1 -> {
           String contentName = content.localizedName;
           //Replace "ä", "ö", "ü", cuz they result crap in the techLabel Style...
-          Log.info("Content Name: "+contentName);
+          //Log.info("Content Name: "+contentName);
           contentName = contentName.replace("ü", "ue");
           contentName = contentName.replace("ö", "oe");
           contentName = contentName.replace("ä", "ae");
           contentName = contentName.replace("Ö", "Oe");
           contentName = contentName.replace("Ä", "Ae");
           contentName = contentName.replace("Ü", "Ue");
-          Log.info("Content Name After: "+contentName);
+          //Log.info("Content Name After: "+contentName);
             title1.image(content.uiIcon).size(iconXLarge).scaling(Scaling.fit);
             title1.row(); // New row
             title1.row(); //Next row 2
