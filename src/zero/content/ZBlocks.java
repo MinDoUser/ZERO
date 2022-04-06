@@ -1,4 +1,4 @@
-zero.content;
+package zero.content;
 
 import arc.graphics.*;
 import arc.math.*;
