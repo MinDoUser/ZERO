@@ -17,9 +17,9 @@ public class ZSettings{
     SettingsMenuDialog settings = Vars.ui.settings;
 		
 		settings.graphics.row();
-    settings.graphics.add("[stat]MOD:", Styles.techLabel);
-    settings.graphics.row();
-		setting.graphics.checkPref("overridecontentdialog", true); //Not much so far...
+    		settings.graphics.add("[stat]MOD:", Styles.techLabel);
+    		settings.graphics.row();
+		settings.graphics.checkPref("overridecontentdialog", true); //Not much so far...
     
     if(shouldUpdate) update();
   }
