@@ -22,7 +22,7 @@ public class ZeroMod extends Mod{
 		  settings.graphics.checkPref("overridecontentdialog", true, b -> {
 			  Log.info("Boolean: "+b);
 		  Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
-		  })
+		  });
     		startScreen();
 	  });
   }
