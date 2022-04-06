@@ -32,9 +32,9 @@ public class ContentInfoOverride extends ContentInfoDialog{
           String contentName = content.localizedName;
           //Replace "ä", "ö", "ü", cuz they result crap in the techLabel Style...
           Log.info("Content Name: "+contentName);
-          contentName.replace("ü", "ue");
-          contentName.replace("ö", "oe");
-          contentName.replace("ä", "ae");
+          contentName = contentName.replace("ü", "ue");
+          contentName = contentName.replace("ö", "oe");
+          contentName = contentName.replace("ä", "ae");
           Log.info("Content Name After: "+contentName);
             title1.image(content.uiIcon).size(iconXLarge).scaling(Scaling.fit);
             title1.row(); // New row
