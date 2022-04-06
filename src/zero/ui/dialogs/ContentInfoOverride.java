@@ -29,9 +29,17 @@ public class ContentInfoOverride extends ContentInfoDialog{
         content.checkStats();
 
         table.table(title1 -> {
+          String contentName = content.localizedName;
+          //Replace "ä", "ö", "ü", cuz they result crap in the techLabel Style...
+          contentName.replace("ü", "ue");
+          contentName.replace("ö", "oe");
+          contentName.replace("ä", "ae");
             title1.image(content.uiIcon).size(iconXLarge).scaling(Scaling.fit);
             title1.row(); // New row
-            title1.add("[accent]" + content.localizedName + (enableConsole ? "\n[gray]" + content.name : ""), Styles.techLabel).padLeft(5);
+            title1.row(); //Next row 2
+            title1.add("[accent]" + contentName, Styles.techLabel).padLeft(5);
+          title1.row();
+          title1.add(enableConsole ? "[gray]" + content.name : "");
         });
 
         table.row();
