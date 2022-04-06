@@ -2,6 +2,11 @@ package zero.function;
 
 import mindustry.ui.dialogs.*;
 import mindustry.ui.Styles;
+import mindustry.Vars;
+
+import zero.ui.dialogs.*;
+
+import arc.Core;
 
 import static mindustry.Vars.ui;
 
@@ -20,5 +25,6 @@ public class ZSettings{
   }
   public static void update(){
     overrideInfoDialog = Core.settings.getBool("overridecontentdialog");
+	  Vars.ui.content = overrideInfoDialog ? new ContentInfoOverride(): new ContentInfoDialog(); // Change  the dialog...
   }
 }
