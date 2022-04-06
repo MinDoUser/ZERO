@@ -11,18 +11,14 @@ import mindustry.ui.dialogs.BaseDialog;
 import mindustry.ui.Styles;
 
 import zero.ui.dialogs.*;
+import zero.function.*;
 
 public class ZeroMod extends Mod{
   public ZeroMod(){
 	  //Object of mod is created when loaded into the Mods dialog...
 
 	  Events.on(ClientLoadEvent.class, e -> {
-		  SettingsMenuDialog settings = Vars.ui.settings;
-		  settings.graphics.row();
-		  settings.graphics.checkPref("overridecontentdialog", true, b -> {
-			  Log.info("Boolean: "+b);
-		  Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
-		  });
+		  ZSettings.updateSettings();
     		startScreen();
 	  });
   }
