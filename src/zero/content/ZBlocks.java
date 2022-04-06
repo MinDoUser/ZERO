@@ -42,7 +42,8 @@ public class ZBlocks implements ContentList{
       fragment = new PowerTurret("fragment"){{
             requirements(Category.turret, with(Items.copper, 120, Items.lead, 25, Items.graphite, 12));
             shootType = new LaserBoltBulletType(5.2f, 13){{
-                    lifetime = 33f;
+                    lifetime = 24f;
+                    speed = 2.9f;
                     healPercent = 7f;
                     collidesTeam = true;
                     backColor = Pal.heal;
@@ -54,7 +55,7 @@ public class ZBlocks implements ContentList{
             powerUse = 3.77f;
             targetAir = false;
             targetHealing = true;
-            range = 90f;
+            range = 120f;
             shootEffect = Fx.heal;
             heatColor = Color.red;
             recoilAmount = 1f;
