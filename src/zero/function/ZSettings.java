@@ -7,6 +7,8 @@ import mindustry.Vars;
 import zero.ui.dialogs.*;
 
 import arc.Core;
+import arc.*;
+import arc.util.*;
 
 import static mindustry.Vars.ui;
 
