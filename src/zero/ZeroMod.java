@@ -45,6 +45,7 @@ public class ZeroMod extends Mod{
 }
 @Override
 public void loadContent(){
+	new ZBlocks().load();
         Log.info("Loaded all Java files.");
     }
 }
