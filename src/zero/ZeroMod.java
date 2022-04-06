@@ -9,14 +9,17 @@ import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.ui.dialogs.BaseDialog;
 import mindustry.ui.Styles;
+
 import zero.ui.dialogs.*;
-//Yep, it's not the best name, but everthing else just didn't work...
+import zero.function.*;
+
 public class ZeroMod extends Mod{
   public ZeroMod(){
 	  //Object of mod is created when loaded into the Mods dialog...
 
 	  Events.on(ClientLoadEvent.class, e -> {
 		  Vars.ui.content = new ContentInfoOverride();
+		  ZSettings.updateSettings(true);
     		startScreen();
 	  });
   }
