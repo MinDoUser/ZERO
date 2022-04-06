@@ -35,6 +35,9 @@ public class ContentInfoOverride extends ContentInfoDialog{
           contentName = contentName.replace("ü", "ue");
           contentName = contentName.replace("ö", "oe");
           contentName = contentName.replace("ä", "ae");
+          contentName = contentName.replace("Ö", "Oe");
+          contentName = contentName.replace("Ä", "Ae");
+          contentName = contentName.replace("Ü", "Ue");
           Log.info("Content Name After: "+contentName);
             title1.image(content.uiIcon).size(iconXLarge).scaling(Scaling.fit);
             title1.row(); // New row
