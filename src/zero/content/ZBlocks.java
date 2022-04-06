@@ -61,7 +61,7 @@ public class ZBlocks implements ContentList{
             recoilAmount = 1f;
             size = 1;
             health = 280;
-            shootSound = Sounds.wave;
+            shootSound = Sounds.none;
         }};
     }
 }
