@@ -16,7 +16,7 @@ public class ZSettings{
  public static void updateSettings(){
 	SettingsMenuDialog settings = Vars.ui.settings;
 	settings.graphics.row();
-	 settings.add("[white]MOD SETTINGS", Styles.techLabel);
+	 settings.graphics.add("[white]MOD SETTINGS", Styles.techLabel);
 	settings.graphics.checkPref("overridecontentdialog", true, b -> {
 	Log.info("Boolean: "+b);
 	Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
