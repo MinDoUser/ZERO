@@ -11,20 +11,13 @@ import arc.Core;
 import static mindustry.Vars.ui;
 
 public class ZSettings{
-  public static boolean overrideInfoDialog = false;
-  
-  public static void updateSettings(boolean shouldUpdate){
-    SettingsMenuDialog settings = Vars.ui.settings;
-		
-		settings.graphics.row();
-    		settings.graphics.add("[stat]MOD:", Styles.techLabel);
-    		settings.graphics.row();
-		settings.graphics.checkPref("overridecontentdialog", true); //Not much so far...
-    
-    if(shouldUpdate) update();
-  }
-  public static void update(){
-    overrideInfoDialog = Core.settings.getBool("overridecontentdialog");
-	  Vars.ui.content = overrideInfoDialog ? new ContentInfoOverride(): new ContentInfoDialog(); // Change  the dialog...
-  }
+ public void updateSettings(){
+	SettingsMenuDialog settings = Vars.ui.settings;
+	settings.graphics.row();
+	 settings.add("[white]MOD SETTINGS", Styles.techLabel);
+	settings.graphics.checkPref("overridecontentdialog", true, b -> {
+	Log.info("Boolean: "+b);
+	Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
+	});
+ }
 }
