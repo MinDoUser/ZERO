@@ -13,13 +13,15 @@ import arc.util.*;
 import static mindustry.Vars.ui;
 
 public class ZSettings{
+	boolean override = true;
  public static void updateSettings(){
 	SettingsMenuDialog settings = Vars.ui.settings;
 	settings.graphics.row();
 	 settings.graphics.add("[white]MOD SETTINGS", Styles.techLabel);
 	settings.graphics.checkPref("overridecontentdialog", true, b -> {
 	Log.info("Boolean: "+b);
-	Vars.ui.content = b?new ContentInfoOverride(): new ContentInfoDialog();
+	override = b;
+	Vars.ui.content = override?new ContentInfoOverride(): new ContentInfoDialog();
 	});
  }
 }
