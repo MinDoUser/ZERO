@@ -23,3 +23,4 @@ public class ZBullets implements ContentList{
             collidesGround = true;
         }};
     }
+}
