@@ -17,7 +17,7 @@ public class ZBullets implements ContentList{
             width =6f;
             height = 11f;
             shrinkY = 0f;
-            lifetime = 12f;
+            lifetime = 67f;
             frontColor = Pal.lancerLaser ;
             backColor = Color.white;
             despawnEffect = Fx.none;
