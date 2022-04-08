@@ -45,7 +45,7 @@ public class ZBlocks implements ContentList{
 			{
 				requirements(Category.crafting, with(Items.copper, 260, Items.silicon, 43, Items.graphite, 160));
 				craftEffect = Fx.smeltsmoke;
-				outputItems = new ItemStack(ZItems.steel, 2)
+				outputItems = new ItemStack(ZItems.steel, 2);
 				craftTime = 56f;
 				size = 2;
 				hasPower = hasItems = true;
