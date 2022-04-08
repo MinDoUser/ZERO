@@ -38,6 +38,7 @@ public class ZeroMod extends Mod{
 				table.table(t -> {
 					t.add("$dialogs.welcomeText");
 					t.row();
+					t.row();
 					t.button("< Ready >", dialog::hide).size(150f, 100f);
 				}).grow();
 			}).fill();
@@ -46,6 +47,7 @@ public class ZeroMod extends Mod{
 }
 @Override
 public void loadContent(){
+	new ZBullets().load();
 	new ZBlocks().load();
         Log.info("Loaded all Java files.");
     }
