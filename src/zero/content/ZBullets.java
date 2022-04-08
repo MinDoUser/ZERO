@@ -14,8 +14,8 @@ public class ZBullets implements ContentList{
     @Override
     public void load(){
             circleSmall = new BasicBulletType(2.88f, 12, "zero-circle"){{
-            width =6f;
-            height = 11f;
+            width =15f;
+            height = 15f;
             shrinkY = 0f;
             lifetime = 67f;
             frontColor = Pal.lancerLaser ;
