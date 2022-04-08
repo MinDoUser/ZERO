@@ -6,6 +6,7 @@ import mindustry.ctype.*;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
 import mindustry.graphics.*;
+import mindustry.content.*;
 
 public class ZBullets implements ContentList{
     public static BulletType circleSmall;
