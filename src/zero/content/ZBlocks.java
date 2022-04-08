@@ -36,7 +36,7 @@ import static mindustry.type.ItemStack.*;
 public class ZBlocks implements ContentList{
     public static Block
       //Turret
-      fragment;
+      fragment, hydra;
       @Override
     public void load(){
       fragment = new PowerTurret("fragment"){{
@@ -62,6 +62,23 @@ public class ZBlocks implements ContentList{
             size = 1;
             health = 280;
             shootSound = Sounds.none;
+        }};
+        hydra = new PowerTurret("hydra"){{
+            requirements(Category.turret, with(Items.copper, 220, Items.lead, 310, Items.graphite, 120, Items.silicon, 80));
+            shootType = ZBullets.circleSmall;
+            reloadTime = 26f;
+            shootCone = 44f;
+            rotateSpeed = 2.7f;
+            powerUse = 4.11f;
+            targetAir = false;
+            targetHealing = false;
+            range = ZBullets.circleSmall.lifetime * ZBullets.circleSmall.speed;
+            shootEffect = Fx.absorb;
+            heatColor = Color.red;
+            recoilAmount = 1.1f;
+            size = 2;
+            health = 780;
+            shootSound = Sounds.laser;
         }};
     }
 }
