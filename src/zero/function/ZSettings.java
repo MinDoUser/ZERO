@@ -13,7 +13,7 @@ import arc.util.*;
 import static mindustry.Vars.ui;
 
 public class ZSettings{
-	boolean override = true;
+	static boolean override = true;
  public static void updateSettings(){
 	SettingsMenuDialog settings = Vars.ui.settings;
 	settings.graphics.row();
