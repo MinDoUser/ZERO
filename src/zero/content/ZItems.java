@@ -10,7 +10,7 @@ public class ZItems implements ContentList{
       @Override
     public void load(){
         steel = new Item("steel", Color.valueOf("97a0af")){{
-            hardness = 1.3;
+            hardness = 1;
             cost = 0.9f;
             alwaysUnlocked = false;
         }};
