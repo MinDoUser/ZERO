@@ -36,9 +36,25 @@ import static mindustry.type.ItemStack.*;
 public class ZBlocks implements ContentList{
     public static Block
       //Turret
-      fragment, hydra;
+      fragment, hydra,
+        //Crafting
+        sheetForge;
       @Override
     public void load(){
+        sheetForge = new GenericCrafter("sheet-forge") {
+			{
+				requirements(Category.crafting, with(Items.copper, 260, Items.silicon, 43, Items.graphite, 160));
+				craftEffect = Fx.smeltsmoke;
+				outputItems = new ItemStack(ZItems.steel, 2)
+				craftTime = 56f;
+				size = 2;
+				hasPower = hasItems = true;
+				drawer = new DrawSmelter();
+				
+				consumes.items(new ItemStack(Items.graphite,3), new ItemStack(Items.copper,4), new ItemStack(Items.lead,3));
+				consumes.power(1.8f);
+			}
+		};
       fragment = new PowerTurret("fragment"){{
             requirements(Category.turret, with(Items.copper, 120, Items.lead, 25, Items.graphite, 12));
             shootType = new LaserBoltBulletType(5.2f, 13){{
