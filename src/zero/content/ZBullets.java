@@ -20,7 +20,7 @@ public class ZBullets implements ContentList{
             lifetime = 67f;
             frontColor = Pal.lancerLaser ;
             backColor = Color.white;
-            despawnEffect = Fx.none;
+            despawnEffect = Fx.smeltsmoke;
             collidesGround = true;
         }};
     }
