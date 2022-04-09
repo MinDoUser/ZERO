@@ -81,7 +81,7 @@ public class ZBlocks implements ContentList{
             recoilAmount = 1f;
             size = 1;
             health = 280;
-            shootSound = Sounds.none;
+            shootSound = Sounds.beam;
         }};
         hydra = new PowerTurret("hydra"){{
             requirements(Category.turret, with(Items.copper, 220, Items.lead, 310, Items.graphite, 120, Items.silicon, 80));
