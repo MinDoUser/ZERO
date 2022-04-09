@@ -20,8 +20,9 @@ public class ZSettings{
 	 settings.graphics.add("[white]MOD SETTINGS", Styles.techLabel);
 	settings.graphics.checkPref("overridecontentdialog", true, b -> {
 	Log.info("Boolean: "+b);
-	override = b;
 	Vars.ui.content = override?new ContentInfoOverride(): new ContentInfoDialog();
+	override = b;
+	
 	});
  }
 }
