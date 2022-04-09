@@ -45,7 +45,7 @@ public class ZBlocks implements ContentList{
 			{
 				requirements(Category.crafting, with(Items.copper, 260, Items.silicon, 43, Items.graphite, 160));
 				craftEffect = Fx.smeltsmoke;
-				ItemStack[] out = {new ItemStack(ZItems.steel, 3), new ItemStack(Items.silicon, 1)};
+				ItemStack[] out = {new ItemStack(ZItems.steel, 3)};
 				outputItems = out;
 				craftTime = 56f;
 				size = 2;
@@ -61,7 +61,7 @@ public class ZBlocks implements ContentList{
 		};
       fragment = new PowerTurret("fragment"){{
             requirements(Category.turret, with(Items.copper, 120, Items.lead, 25, Items.graphite, 12));
-            shootType = new LaserBoltBulletType(5.2f, 13){{
+            shootType = new LaserBoltBulletType(2.2f, 13){{
                     lifetime = 26f;
                     //speed = 2.9f;
                     healPercent = 7f;
@@ -75,13 +75,13 @@ public class ZBlocks implements ContentList{
             powerUse = 3.77f;
             targetAir = false;
             targetHealing = true;
-            range = (float)5.2*26;
+            range = (float)2.2*26;
             shootEffect = Fx.heal;
             heatColor = Color.red;
             recoilAmount = 1f;
             size = 1;
             health = 280;
-            shootSound = Sounds.beam;
+            shootSound = Sounds.pew;
         }};
         hydra = new PowerTurret("hydra"){{
             requirements(Category.turret, with(Items.copper, 220, Items.lead, 310, Items.graphite, 120, Items.silicon, 80));
