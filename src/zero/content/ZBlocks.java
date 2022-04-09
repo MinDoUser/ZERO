@@ -75,7 +75,7 @@ public class ZBlocks implements ContentList{
             powerUse = 3.77f;
             targetAir = false;
             targetHealing = true;
-            range = 5.2*26;
+            range = (float)5.2*26;
             shootEffect = Fx.heal;
             heatColor = Color.red;
             recoilAmount = 1f;
