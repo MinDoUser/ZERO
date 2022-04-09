@@ -45,12 +45,15 @@ public class ZBlocks implements ContentList{
 			{
 				requirements(Category.crafting, with(Items.copper, 260, Items.silicon, 43, Items.graphite, 160));
 				craftEffect = Fx.smeltsmoke;
-				ItemStack[] out = {new ItemStack(ZItems.steel, 2), new ItemStack(Items.silicon, 1)};
+				ItemStack[] out = {new ItemStack(ZItems.steel, 3), new ItemStack(Items.silicon, 1)};
 				outputItems = out;
 				craftTime = 56f;
 				size = 2;
 				hasPower = hasItems = true;
 				drawer = new DrawSmelter();
+				
+				ambientSound = Sounds.smelter;
+            			ambientSoundVolume = 0.07f;
 				
 				consumes.items(new ItemStack(Items.graphite,3), new ItemStack(Items.copper,4), new ItemStack(Items.lead,3));
 				consumes.power(1.8f);
