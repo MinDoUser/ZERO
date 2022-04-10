@@ -10,7 +10,7 @@ import arc.graphics.g2d.*;
 import arc.math.*;
 import arc.util.*;
 import mindustry.*;
-import mindustry.annotations.Annotations.*;
+//import mindustry.annotations.Annotations.*;
 import mindustry.ctype.*;
 import mindustry.game.EventType.*;
 import mindustry.game.*;
