@@ -1,7 +1,25 @@
 package zero.entities.bullets;
 
 import mindustry.entities.bullet.*;
+import mindustry.entities.*;
 import mindustry.content.*;
+import arc.*;
+import arc.audio.*;
+import arc.graphics.*;
+import arc.graphics.g2d.*;
+import arc.math.*;
+import arc.util.*;
+import mindustry.*;
+import mindustry.annotations.Annotations.*;
+import mindustry.ctype.*;
+import mindustry.game.EventType.*;
+import mindustry.game.*;
+import mindustry.gen.*;
+import mindustry.graphics.*;
+import mindustry.type.*;
+import mindustry.world.*;
+
+import static mindustry.Vars.*;
 
 public class MultiEffectBulletType extends BasicBulletType{
     public int despawnEffects = 1; // 1 by default, to avoid NullPointer
