@@ -8,12 +8,15 @@ import mindustry.entities.effect.*;
 import mindustry.graphics.*;
 import mindustry.content.*;
 
+import zero.entities.bullets.*;
+
 public class ZBullets implements ContentList{
     public static BulletType circleSmall;
     
     @Override
     public void load(){
-            circleSmall = new BasicBulletType(2.88f, 12, "zero-circle"){{
+            circleSmall = new MultiEffectBulletType(2.88f, 12, "zero-circle"){{
+                despawnEffects  = 12;
             width =15f;
             height = 15f;
             shrinkY = 0f;
