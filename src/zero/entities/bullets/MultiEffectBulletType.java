@@ -1,4 +1,4 @@
-package zero.entities.bullets.*;
+package zero.entities.bullets;
 
 import mindustry.entities.bullet.*;
 import mindustry.content.*;
