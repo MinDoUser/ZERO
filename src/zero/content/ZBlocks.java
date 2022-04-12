@@ -31,16 +31,33 @@ import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 import mindustry.content.*;
 
+import zero.world.blocks.defense.*;
+
 import static mindustry.type.ItemStack.*;
 
 public class ZBlocks implements ContentList{
     public static Block
+	    //Wall 
+	    arcWall, arcWallBig,
       //Turret
       fragment, hydra,
         //Crafting
         sheetForge;
       @Override
     public void load(){
+	int wallHealthMultiplier = 4;
+
+        arcWall = new HealthWall("arc-wall"){{
+            requirements(Category.defense, with(Items.surge, 12, ZItems.steel, 4, silicon, 4));
+            health = 275 * wallHealthMultiplier;
+	     healthPercent = 6;
+        }};
+	arcWallBig = new HealthWall("arc-wall"){{
+            requirements(Category.defense, with(Items.surge, 12, ZItems.steel, 4, silicon, 4));
+            health = 275 * 4 * wallHealthMultiplier;
+	     healthPercent = 6*2;
+        }};
+	    
         sheetForge = new GenericCrafter("sheet-forge") {
 			{
 				requirements(Category.crafting, with(Items.copper, 260, Items.silicon, 43, Items.graphite, 160));
