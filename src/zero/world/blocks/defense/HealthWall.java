@@ -49,7 +49,7 @@ public class HealthWall extends Wall{
         }
         @Override
         public boolean collision(Bullet bullet){
-            super.collision(bullet);
+            boolean b = super.collision(bullet);
             indexer.allBuildings(this.x, this.y, range(), other -> {
               healAmount = (other.maxHealth/100)*healthPercent;
               if(other.team == this.team){
@@ -57,6 +57,7 @@ public class HealthWall extends Wall{
                 Fx.healBlockFull.at(other.x, other.y, other.block.size, Pal.heal);
               }
             });
+            return b;
       }
       @Override
       public void drawSelect(){
