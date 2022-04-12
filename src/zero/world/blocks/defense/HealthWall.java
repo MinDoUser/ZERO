@@ -8,6 +8,7 @@ import arc.math.*;
 import arc.util.*;
 
 import mindustry.world.blocks.defense.Wall;
+import mindustry.logic.*;
 import mindustry.entities.*;
 import mindustry.gen.*;
 import mindustry.graphics.*;
