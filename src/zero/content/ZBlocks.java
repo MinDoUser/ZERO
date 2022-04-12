@@ -48,12 +48,12 @@ public class ZBlocks implements ContentList{
 	int wallHealthMultiplier = 4;
 
         arcWall = new HealthWall("arc-wall"){{
-            requirements(Category.defense, with(Items.surge, 12, ZItems.steel, 4, silicon, 4));
+            requirements(Category.defense, with(Items.surgeAlloy, 12, ZItems.steel, 4, Items.silicon, 4));
             health = 275 * wallHealthMultiplier;
 	     healthPercent = 6;
         }};
-	arcWallBig = new HealthWall("arc-wall"){{
-            requirements(Category.defense, with(Items.surge, 12, ZItems.steel, 4, silicon, 4));
+	arcWallBig = new HealthWall("arc-wall-big"){{
+            requirements(Category.defense, with(Items.surgeAlloy, 12*4, ZItems.steel, 4*4, Items.silicon, 4*4));
             health = 275 * 4 * wallHealthMultiplier;
 	     healthPercent = 6*2;
         }};
