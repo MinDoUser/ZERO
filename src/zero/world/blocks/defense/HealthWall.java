@@ -36,7 +36,7 @@ public class HealthWall extends Wall{
         Vars.indexer.eachBlock(player.team(), x * tilesize + offset, y * tilesize + offset, range, other -> true, other -> Drawf.selected(other, Tmp.c1.set(Pal.heal).a(Mathf.absin(4f, 1f))));
       }
   
-      public class HealthWallBiuld extends WallBiuld implements Ranged{
+      public class HealthWallBuild extends WallBuild implements Ranged{
         float healAmount;
         @Override
         default float range(){
@@ -52,10 +52,12 @@ public class HealthWall extends Wall{
                 other.heal(healAmount);
                 Fx.healBlockFull.at(other.x, other.y, other.block.size, Pal.heal);
               }
+            });
       }
       @Override
       public void drawSelect(){
        Vars.indexer.eachBlock(player.team(), x * tilesize + offset, y * tilesize + offset, range, other -> true, other -> Drawf.selected(other, Tmp.c1.set(Pal.heal).a(Mathf.absin(4f, 1f))));
         Drawf.dashCircle(x * tilesize + offset, y * tilesize + offset, range, Pal.heal);
       }
+}
 }
