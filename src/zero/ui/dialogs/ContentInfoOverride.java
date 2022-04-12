@@ -38,6 +38,7 @@ public class ContentInfoOverride extends ContentInfoDialog{
           contentName = contentName.replace("Ö", "Oe");
           contentName = contentName.replace("Ä", "Ae");
           contentName = contentName.replace("Ü", "Ue");
+          contentName = contentName.replace("ß", "ss");
           //Log.info("Content Name After: "+contentName);
             title1.image(content.uiIcon).size(iconXLarge).scaling(Scaling.fit);
             title1.row(); // New row
@@ -94,7 +95,8 @@ public class ContentInfoOverride extends ContentInfoDialog{
         }
 
         if(content.details != null){
-            table.add("[gray]" + (content.unlocked() || !content.hideDetails ? content.details : Iconc.lock + " " + Core.bundle.get("unlock.incampaign"))).pad(6).padTop(20).width(400f).wrap().fillX();
+            table.add("[#bcbcbc]Details: ", Styles.techLabel).pad(6).padTop(20).width(400f).wrap().fillX();
+            table.add("[gray]" + (content.unlocked() || !content.hideDetails ? content.details : Iconc.lock + " " + Core.bundle.get("unlock.incampaign"))).pad(6).padTop(2).width(400f).wrap().fillX();
             table.row();
         }
 
