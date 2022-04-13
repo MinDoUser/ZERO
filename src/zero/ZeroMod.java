@@ -38,7 +38,7 @@ public class ZeroMod extends Mod{
 				table.pane(p -> {
 					p.image(ZContent.logo).row();
 					p.row();
-					p.image().growX().pad(5).padLeft(0).padRight(0).height(5).color(Pal.white);
+					p.image().growX().pad(5).padLeft(0).padRight(0).height(5).color(ZColor.white);
 					p.row();
 					p.add("[white]<<< Z E R O >>>", Styles.techLabel).row();
 				}).fillY().growX().row();
