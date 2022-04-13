@@ -9,6 +9,7 @@ import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.ui.dialogs.BaseDialog;
 import mindustry.ui.Styles;
+import mindustry.graphics.*;
 
 import zero.ui.dialogs.*;
 import zero.function.*;
