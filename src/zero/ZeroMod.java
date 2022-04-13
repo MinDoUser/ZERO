@@ -15,6 +15,11 @@ import zero.function.*;
 import zero.content.*;
 
 public class ZeroMod extends Mod{
+	public static final String MOD_NAME = "zero"; // Mod name.
+	/** Creates a new String wich contains the mod name. */
+	public static String getName(String str){
+		return MOD_NAME+"-"+str;
+	}
   public ZeroMod(){
 	  //Object of mod is created when loaded into the Mods dialog...
 
