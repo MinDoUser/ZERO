@@ -30,7 +30,8 @@ public class HealthWall extends Wall{
     public void setStats(){
         super.setStats();
         // Amount of healing
-        stats.add(Stat.healing, healthPercent, StatUnit.none);
+        stats.add(Core.bundle.get("stat.zero-healthAmount"), healthPercent, StatUnit.percent);
+        stats.add(Core.bundle.get("stat.zero-healChance"), healChance, StatUnit.percent);
     }
       @Override
       public void drawPlace(int x, int y, int rotation, boolean valid){
