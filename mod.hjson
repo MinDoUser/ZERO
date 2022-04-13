@@ -21,3 +21,6 @@ minGameVersion: 135
 
 #this is a java mod
 java: true
+
+#Hide it
+hideBrowser: true
