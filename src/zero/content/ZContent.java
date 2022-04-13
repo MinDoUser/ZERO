@@ -12,6 +12,6 @@ public class ZContent implements ContentList{
   	public static TextureRegion logo;
   @Override
   public void load(){
-    logo = Core.atlas.find(ZeroMod.name("upgrade"));
+    logo = Core.atlas.find(ZeroMod.getName("logo"));
   }
 }
