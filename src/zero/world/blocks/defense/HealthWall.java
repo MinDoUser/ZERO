@@ -30,8 +30,11 @@ public class HealthWall extends Wall{
     public void setStats(){
         super.setStats();
         // Amount of healing
-        stats.add(Core.bundle.get("stat.zero-healthAmount"), healthPercent, StatUnit.percent);
-        stats.add(Core.bundle.get("stat.zero-healChance"), healChance, StatUnit.percent);
+        //stats.add(Core.bundle.get("stat.zero-healthAmount"), healthPercent, StatUnit.percent); // Booh, unable to make own Stats? Really?
+        //stats.add(Core.bundle.get("stat.zero-healChance"), healChance, StatUnit.percent);
+        stats.add(Stat.healing, healthPercent, StatUnit.percent);
+        //stats.add(, healChance, StatUnit.percent);
+        stats.add(Stat.range, range/8, StatUnit.blocks);
     }
       @Override
       public void drawPlace(int x, int y, int rotation, boolean valid){
