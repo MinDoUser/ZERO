@@ -34,6 +34,7 @@ import mindustry.content.*;
 import zero.world.blocks.defense.*;
 
 import static mindustry.type.ItemStack.*;
+import static mindustry.type.LiquidStack.*;
 
 public class ZBlocks implements ContentList{
     public static Block
@@ -42,7 +43,7 @@ public class ZBlocks implements ContentList{
       //Turret
       fragment, hydra,
         //Crafting
-        sheetForge;
+        sheetForge, siliconOven;
       @Override
     public void load(){
 	int wallHealthMultiplier = 4;
@@ -73,6 +74,25 @@ public class ZBlocks implements ContentList{
             			ambientSoundVolume = 0.07f;
 				
 				consumes.items(new ItemStack(Items.graphite,3), new ItemStack(Items.copper,4), new ItemStack(Items.lead,3));
+				consumes.power(1.8f);
+			}
+		};
+		siliconOven = new GenericCrafter("silicon-oven") {
+			{
+				requirements(Category.crafting, with(Items.copper, 290, Items.metaglass, 75, Items.graphite, 130));
+				craftEffect = Fx.smeltsmoke;
+				ItemStack[] out = {new ItemStack(Items.silicon, 1)};
+				outputItems = out;
+				outputLiquid = new LiquidStack(Liquids.slag, 30);
+				craftTime = 54f;
+				size = 2;
+				hasPower = hasItems = hasLiquids = true;
+				drawer = new DrawLiquidRegion();
+				
+				ambientSound = Sounds.smelter;
+            			ambientSoundVolume = 0.07f;
+				
+				consumes.items(new ItemStack(Items.sand, 2));
 				consumes.power(1.8f);
 			}
 		};
