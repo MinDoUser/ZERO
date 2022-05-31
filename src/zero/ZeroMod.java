@@ -66,7 +66,7 @@ public class ZeroMod extends Mod{
 		buttonTable1 = new Table();
 		buttonTable1.button("Mod Info", Icon.info,()->{
 			modDialog.show();
-		}).setSize(150, 75);
+		}).get().setSize(150, 75);
 		//buttonTable2 = buttonTable1(); //To get 2 different tabled.
 		
 		Table screenTable = Core.scene.table();
