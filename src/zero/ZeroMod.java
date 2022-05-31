@@ -1,5 +1,6 @@
 package zero;
 import arc.*;
+import arc.scene.ui.layout.*;
 import arc.util.*;
 import mindustry.*;
 import mindustry.content.*;
@@ -16,6 +17,8 @@ import zero.function.*;
 import zero.content.*;
 
 public class ZeroMod extends Mod{
+	public static final AboutModDialog modDialog = new AboutModDialog();
+	
 	public static final String MOD_NAME = "zero"; // Mod name.
 	/** Creates a new String wich contains the mod name. */
 	public static String getName(String str){
@@ -28,6 +31,7 @@ public class ZeroMod extends Mod{
 		  new ZContent().load(); // Load here cuz we need it soon...
 		  ZSettings.updateSettings();
     		startScreen();
+		  createButton();
 	  });
   }
 	public static void startScreen(){
@@ -56,6 +60,18 @@ public class ZeroMod extends Mod{
 		}).grow();
 	dialog.show();
 }
+	public void createButton(){
+		Table buttonTable1;
+		//Table buttonTable2;
+		buttonTable1 = new Table();
+		buttonTable1.button("Mod Info", Icon.info,()->{
+			modDialog.show();
+		}).setSize(150, 75);
+		//buttonTable2 = buttonTable1(); //To get 2 different tabled.
+		
+		Table screenTable = Core.scene.table();
+		screenTable.bottom().left().add(buttonTable1);
+	}
 @Override
 public void loadContent(){
 	new ZItems().load();
