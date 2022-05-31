@@ -57,6 +57,7 @@ public class ZBlocks implements ContentList{
             requirements(Category.defense, with(Items.surgeAlloy, 12*4, ZItems.steel, 4*4, Items.silicon, 4*4));
             health = 275 * 4 * wallHealthMultiplier;
 	     healthPercent = 6*2;
+		size = 2;
         }};
 	    
         sheetForge = new GenericCrafter("sheet-forge") {
