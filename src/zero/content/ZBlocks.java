@@ -34,7 +34,7 @@ import mindustry.content.*;
 import zero.world.blocks.defense.*;
 
 import static mindustry.type.ItemStack.*;
-import static mindustry.type.LiquidStack.*;
+//import static mindustry.type.LiquidStack.*;
 
 public class ZBlocks implements ContentList{
     public static Block
@@ -87,7 +87,7 @@ public class ZBlocks implements ContentList{
 				craftTime = 54f;
 				size = 2;
 				hasPower = hasItems = hasLiquids = true;
-				drawer = new DrawLiquidRegion();
+				drawer = new DrawMixer();//new DrawLiquidRegion(); At 136
 				
 				ambientSound = Sounds.smelter;
             			ambientSoundVolume = 0.07f;
