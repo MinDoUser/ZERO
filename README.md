@@ -17,9 +17,8 @@ So far, I've disable the visible for the Mod Browser of Mindustry.
 I've added some mod specific settings. You can find them as new points in the normal settings.
 
 ## Translations
-There are currently 2 translations avaible: <br>
+There are currently 1 translation avaible: <br>
 **1**: English: The default Bundle, it's (amost) always completed.<br>
-**2**: German: The German Bundle, not always completed.
 
 
 
