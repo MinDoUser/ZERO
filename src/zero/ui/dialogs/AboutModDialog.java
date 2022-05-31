@@ -9,6 +9,9 @@ import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.ui.Styles;
 import mindustry.ui.dialogs.BaseDialog;
+import mindustry.ui.*;
+
+import zero.content.*;
 
 public class AboutModDialog extends BaseDialog{
 	public AboutModDialog(){
@@ -34,7 +37,7 @@ public class AboutModDialog extends BaseDialog{
 					t.add("A mod made by: lol02\nIt adds some new blocks and features.\n\n I hope you like them!");
 					t.row();
 					t.row();
-					t.button("< Ok! >", dialog::hide).size(200f, 100f);
+					t.button("< Ok! >", this::hide).size(200f, 100f);
 				}).grow();
 			}).fill();
 		}).grow();
