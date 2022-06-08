@@ -30,7 +30,7 @@ public class ZeroMod extends Mod{
 	  Events.on(ClientLoadEvent.class, e -> {
 		  new ZContent().load(); // Load here cuz we need it soon...
 		  ZSettings.updateSettings();
-		  new AboutModDialog().show();
+		  modDialog.show();
     		//startScreen();
 	  });
   }
