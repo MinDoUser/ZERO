@@ -17,7 +17,7 @@ import zero.function.*;
 import zero.content.*;
 
 public class ZeroMod extends Mod{
-	public static final AboutModDialog modDialog = new AboutModDialog();
+	//public static final AboutModDialog modDialog = new AboutModDialog();
 	
 	public static final String MOD_NAME = "zero"; // Mod name.
 	/** Creates a new String wich contains the mod name. */
@@ -30,12 +30,12 @@ public class ZeroMod extends Mod{
 	  Events.on(ClientLoadEvent.class, e -> {
 		  new ZContent().load(); // Load here cuz we need it soon...
 		  ZSettings.updateSettings();
-		  modDialog.show();
-    		//startScreen();
+		  //modDialog.show();
+    		startScreen();
 	  });
   }
 	public static void startScreen(){
-		BaseDialog dialog = new BaseDialog("Welcome");
+		/*BaseDialog dialog = new BaseDialog("Welcome");
 		dialog.closeOnBack();
 		dialog.cont.pane(inner -> {
 			inner.pane(table -> {
@@ -58,7 +58,34 @@ public class ZeroMod extends Mod{
 				}).grow();
 			}).fill();
 		}).grow();
-	dialog.show();
+	dialog.show();*/
+		BaseDialog dialog = new BaseDialog("Startscreen");
+		dialog.cont.pane(inner -> {
+			inner.pane(table -> {
+				table.pane(p -> {
+					p.image(ZContent.logo).row();
+					p.row();
+					p.image().growX().pad(5).padLeft(0).padRight(0).height(5).color(ZColor.white);
+					p.row();
+					p.add(new Bar()).growX();
+					p.row();
+					p.add("[white]<<< Z E R O >>>", Styles.techLabel).row();
+					p.row();
+					p.add(new Bar()).growX();
+				}).fillY().growX().row();
+				table.add("").row();
+			}).growX().center().row();
+			
+			inner.table(table -> {
+				table.table(t -> {
+					t.add("A mod made by: lol02\nIt adds some new blocks and features.\n\n I hope you like them!");
+					t.row();
+					t.row();
+					t.button("< Ok! >", this::hide).size(200f, 100f);
+				}).grow();
+			}).fill();
+		}).grow();
+		dialog.show();
 }
 	/*public void createButton(){
 		Table buttonTable1;
