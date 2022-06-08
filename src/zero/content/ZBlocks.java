@@ -93,7 +93,7 @@ public class ZBlocks implements ContentList{
             			ambientSoundVolume = 0.07f;
 				
 				
-				consumeLiquid(Liquids.slag, 0.2f);
+				consume.liquid(Liquids.slag, 0.2f);
 				consumes.items(new ItemStack(Items.sand, 2));
 				consumes.power(1.8f);
 			}
