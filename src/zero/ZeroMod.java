@@ -68,11 +68,11 @@ public class ZeroMod extends Mod{
 					p.row();
 					p.image().growX().pad(5).padLeft(0).padRight(0).height(5).color(ZColor.white);
 					p.row();
-					p.add(new WarningBar()).color(Color.valueof("ffffff")).growX();
+					p.add(new WarningBar()).color(Color.white).growX();
 					p.row();
 					p.add("[white]<<< Z E R O >>>", Styles.techLabel).row();
 					p.row();
-					p.add(new WarningBar()).color(Color.valueof("ffffff")).growX();
+					p.add(new WarningBar()).color(Color.white).growX();
 				}).fillY().growX().row();
 				table.add("").row();
 			}).growX().center().row();
