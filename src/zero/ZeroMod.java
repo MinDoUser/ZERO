@@ -31,7 +31,9 @@ public class ZeroMod extends Mod{
 		  new ZContent().load(); // Load here cuz we need it soon...
 		  ZSettings.updateSettings();
     		startScreen();
+		  Time.runTask(50f, () -> {
 		  createButton();
+		  });
 	  });
   }
 	public static void startScreen(){
