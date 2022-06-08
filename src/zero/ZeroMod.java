@@ -30,10 +30,8 @@ public class ZeroMod extends Mod{
 	  Events.on(ClientLoadEvent.class, e -> {
 		  new ZContent().load(); // Load here cuz we need it soon...
 		  ZSettings.updateSettings();
-    		startScreen();
-		  Time.runTask(50f, () -> {
-		  createButton();
-		  });
+		  new AboutModDialog().show();
+    		//startScreen();
 	  });
   }
 	public static void startScreen(){
@@ -62,7 +60,7 @@ public class ZeroMod extends Mod{
 		}).grow();
 	dialog.show();
 }
-	public void createButton(){
+	/*public void createButton(){
 		Table buttonTable1;
 		//Table buttonTable2;
 		buttonTable1 = new Table();
@@ -73,7 +71,7 @@ public class ZeroMod extends Mod{
 		
 		Table screenTable = Core.scene.table();
 		screenTable.bottom().left().add(buttonTable1);
-	}
+	}*/
 @Override
 public void loadContent(){
 	new ZItems().load();
