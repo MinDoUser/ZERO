@@ -84,7 +84,6 @@ public class ZBlocks implements ContentList{
 				craftEffect = Fx.smeltsmoke;
 				ItemStack[] out = {new ItemStack(Items.silicon, 1)};
 				outputItems = out;
-				outputLiquid = new LiquidStack(Liquids.slag, 30);
 				craftTime = 54f;
 				size = 2;
 				hasPower = hasItems = hasLiquids = true;
@@ -93,6 +92,8 @@ public class ZBlocks implements ContentList{
 				ambientSound = Sounds.smelter;
             			ambientSoundVolume = 0.07f;
 				
+				
+				consumeLiquid(Liquids.slag, 0.2f);
 				consumes.items(new ItemStack(Items.sand, 2));
 				consumes.power(1.8f);
 			}
